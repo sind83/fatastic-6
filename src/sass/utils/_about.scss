@@ -1,0 +1,44 @@
+.about {
+    display: flex;
+    height: 960px;
+    background-color: #FFF5F6;
+    background-image: url(../../images/mobile-about-background01.png), url(../../images/mobile-about-background02.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__description {
+        font-family: 'Titan One';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #FFA5BA;
+    }
+
+    &__bold-paragraph {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 162%;
+        /* or 19px */
+        color: #000000;
+        text-align: left;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 162%;
+        /* or 19px */
+        color: #907E82;
+        text-align: left;
+    }
+}
