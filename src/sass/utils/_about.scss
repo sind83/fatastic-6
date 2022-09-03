@@ -1,44 +1,275 @@
 .about {
-    display: flex;
-    height: 960px;
-    background-color: #FFF5F6;
-    background-image: url(/images/mobile-about-background01.png), url(/images/mobile-about-background02.png);
-    background-position: left bottom, right bottom;
-    background-repeat: no-repeat;
-    width: 100%;
+  display: flex;
+  height: 960px;
+  background-color: #fff5f6;
+  background-image: url(/images/mobile-about-background01.png),
+    url(/images/mobile-about-background02.png);
+  background-position: left 79%, right 79%;
+  background-repeat: no-repeat;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 125px;
+
+  &__description {
+    display: flex;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffa5ba;
+    margin-bottom: 15px;
+  }
+  &__header {
+    display: flex;
+    width: 200px;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #d41443;
+    margin-bottom: 26px;
+  }
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  &__krowka {
+    width: 280px;
+  }
+  &__bold-paragraph {
+    display: flex;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 162%;
+    /* or 19px */
+    color: #000000;
+    text-align: left;
+    padding: 0 50px;
+    margin-bottom: 50px;
+    margin-top: 46px;
+  }
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__text {
+    display: flex;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 162%;
+    /* or 19px */
+    color: #907e82;
+    text-align: left;
+    padding: 0 50px;
+  }
+  &__button {
+    width: 176px;
+    height: 44px;
+    border: none;
+    background: #ffffff;
+    border-radius: 22px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d41443;
+    margin-top: 17px;
+    transition: background-color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      box-shadow 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &__button:hover,
+  &__button:focus {
+    background: #ecebeb;
+    box-shadow: (0px 2px 2px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    display: flex;
+    height: 720px;
+    background-color: #fff5f6;
+    background-image: none;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .about-us {
+    display: flex;
+    align-items: center;
+    padding-top: 130px;
 
     &__description {
-        font-family: 'Titan One';
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 21px;
-        text-align: center;
-        text-transform: uppercase;
-
-        color: #FFA5BA;
+      display: flex;
+      font-family: 'Titan One';
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 29.77px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffa5ba;
+      margin-bottom: 16px;
     }
 
+    &__header {
+      display: flex;
+      width: 600px;
+      font-family: 'Titan One';
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 54.96px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+      color: #d41443;
+      margin-bottom: 26px;
+      justify-content: center;
+    }
+    &__content {
+      display: flex;
+      flex-direction: row;
+      margin: 50px 36px 0px 39px;
+    }
+    &__krowka {
+      width: 340px;
+    }
+    &__text-content {
+      padding-left: 17px;
+      align-items: flex-start;
+    }
     &__bold-paragraph {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 162%;
-        /* or 19px */
-        color: #000000;
-        text-align: left;
+      display: flex;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 176%;
+      /* or 19px */
+      color: #000000;
+      text-align: left;
+      margin-bottom: 50px;
+      margin-top: 46px;
+      padding: 0;
     }
 
     &__text {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 162%;
-        /* or 19px */
-        color: #907E82;
-        text-align: left;
+      display: flex;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 176%;
+      /* or 19px */
+      color: #907e82;
+      text-align: left;
+      padding: 0;
     }
+    &__button {
+      font-size: 16px;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about {
+    display: flex;
+    height: 780px;
+    max-width: 1600px;
+    background-color: #fff5f6;
+    background-image: url(/images/desktop-about-background01.png),
+      url(/images/desktop-about-background02.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .about-us {
+    display: flex;
+    align-items: center;
+    padding-top: 130px;
+
+    &__description {
+      display: flex;
+      font-family: 'Titan One';
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 29.77px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffa5ba;
+      margin-bottom: 55px;
+    }
+
+    &__header {
+      display: flex;
+      width: 600px;
+      font-family: 'Titan One';
+      font-weight: 400;
+      font-size: 58px;
+      line-height: 66px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+      color: #d41443;
+      margin-bottom: 26px;
+      justify-content: center;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+
+      margin: 0 112px;
+    }
+    &__krowka {
+      width: 516px;
+    }
+    &__text-content {
+      display: flex;
+      flex-direction: column;
+      padding-left: 74px;
+      margin-top: 50px;
+    }
+
+    &__bold-paragraph {
+      display: flex;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 176%;
+      /* or 19px */
+      color: #000000;
+      text-align: left;
+      margin-bottom: 50px;
+      margin-top: 46px;
+      padding: 0;
+    }
+
+    &__text {
+      display: flex;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 194%;
+      /* or 19px */
+      color: #907e82;
+      text-align: left;
+      padding: 0;
+    }
+
+    &__button {
+      font-size: 16px;
+    }
+  }
 }
