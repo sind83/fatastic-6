@@ -6,8 +6,22 @@
     url(/images/mobile-about-background02.png);
   background-position: left 79%, right 79%;
   background-repeat: no-repeat;
-  width: 100%;
-  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    height: 720px;
+    background-image: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about {
+    height: 780px;
+    max-width: 1600px;
+    background-image: url(/images/desktop-about-background01.png),
+      url(/images/desktop-about-background02.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+  }
 }
 
 .about-us {
@@ -67,8 +81,9 @@
     align-items: center;
   }
   &__text {
-    display: flex;
+    font-family: 'DM Sans';
     font-weight: 500;
+    display: flex;
     font-size: 12px;
     line-height: 162%;
     /* or 19px */
@@ -100,26 +115,11 @@
     box-shadow: (0px 2px 2px rgba(0, 0, 0, 0.25));
   }
 }
-
 @media screen and (min-width: 768px) {
-  .about {
-    display: flex;
-    height: 720px;
-    background-color: #fff5f6;
-    background-image: none;
-    width: 100%;
-    align-items: flex-start;
-  }
-
   .about-us {
-    display: flex;
-    align-items: center;
     padding-top: 130px;
 
     &__description {
-      display: flex;
-      font-family: 'Titan One';
-      font-weight: 400;
       font-size: 26px;
       line-height: 29.77px;
       text-align: center;
@@ -129,10 +129,7 @@
     }
 
     &__header {
-      display: flex;
       width: 600px;
-      font-family: 'Titan One';
-      font-weight: 400;
       font-size: 48px;
       line-height: 54.96px;
       letter-spacing: 0.04em;
@@ -142,20 +139,22 @@
       margin-bottom: 26px;
       justify-content: center;
     }
+
     &__content {
-      display: flex;
       flex-direction: row;
       margin: 50px 36px 0px 39px;
     }
+
     &__krowka {
       width: 340px;
     }
+
     &__text-content {
       padding-left: 17px;
       align-items: flex-start;
     }
+
     &__bold-paragraph {
-      display: flex;
       font-weight: 500;
       font-size: 14px;
       line-height: 176%;
@@ -168,43 +167,22 @@
     }
 
     &__text {
-      display: flex;
-      font-weight: 500;
       font-size: 14px;
       line-height: 176%;
       /* or 19px */
       color: #907e82;
-      text-align: left;
       padding: 0;
     }
+
     &__button {
       font-size: 16px;
     }
   }
 }
+
 @media screen and (min-width: 1280px) {
-  .about {
-    display: flex;
-    height: 780px;
-    max-width: 1600px;
-    background-color: #fff5f6;
-    background-image: url(/images/desktop-about-background01.png),
-      url(/images/desktop-about-background02.png);
-    background-position: left bottom, right bottom;
-    background-repeat: no-repeat;
-    width: 100%;
-    align-items: flex-start;
-  }
-
   .about-us {
-    display: flex;
-    align-items: center;
-    padding-top: 130px;
-
     &__description {
-      display: flex;
-      font-family: 'Titan One';
-      font-weight: 400;
       font-size: 26px;
       line-height: 29.77px;
       text-align: center;
@@ -214,10 +192,7 @@
     }
 
     &__header {
-      display: flex;
       width: 600px;
-      font-family: 'Titan One';
-      font-weight: 400;
       font-size: 58px;
       line-height: 66px;
       letter-spacing: 0.04em;
@@ -231,14 +206,14 @@
     &__content {
       display: flex;
       flex-direction: row;
-
       margin: 0 112px;
     }
+
     &__krowka {
       width: 516px;
     }
+
     &__text-content {
-      display: flex;
       flex-direction: column;
       padding-left: 74px;
       margin-top: 50px;
@@ -270,6 +245,92 @@
 
     &__button {
       font-size: 16px;
+    }
+  }
+}
+.about-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  color: #d41443;
+  background-color: #f3d2da;
+  border: 3px solid #d41443;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #fff5f6;
+  background-color: #d41443;
+}
+.read-about {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 528px;
+  max-height: 620px;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  background-color: #f3d2da;
+  background-image: url(/images/mobile-about-background01.png),
+    url(/images/mobile-about-background02.png);
+  background-repeat: no-repeat;
+  background-position: top left, right bottom;
+  border-radius: 4px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+
+  &__text {
+    display: block;
+    max-width: 450px;
+    max-height: 450px;
+    overflow: auto;
+      margin: 50px 15px 5px 15px;
+  }
+  &__milkimage {
+    position: flex;
+    margin: 5px;
+  }
+  &__milkimage:hover {
+    animation-name: AnimationReadMe;
+    animation-duration: 2000ms;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+  }
+  @keyframes AnimationReadMe {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(45deg);
     }
   }
 }
