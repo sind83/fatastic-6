@@ -1,0 +1,39 @@
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.contact-position {
+    display: flex;
+    gap: 31px;
+
+    &__box-style {
+        padding: 51px 44px 62px 43px;
+
+        width: 330px;
+        height: 572px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+            border-radius: 24px;
+    }
+    &__name {
+        padding-bottom: 32px;
+    }
+    
+}
