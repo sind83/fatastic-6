@@ -1,0 +1,66 @@
+@import './variables';
+.container{
+&__head{
+    display: block;
+    background-color: $background-color-header;
+    height: 665px;
+}
+}
+.header{
+    display: inline-flex;
+    min-width: 100%;
+   
+    &__bar{
+        display: flex;
+        min-width: 100%;
+        margin-top: 37px;
+        justify-content: space-around;
+    }
+    &__item{
+        display: flex;
+         align-items: center;
+    }
+    &__main-title{
+        font-size: 38px;
+        line-height: 44px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    
+        color: #FFFFFF;
+    }
+    &__text-box{
+        max-width: 277px;
+    }
+}
+.button{
+    &--buy-now{
+        padding-left: 43px;
+        background-color: #FFFFFF;
+        border-radius: 22px;
+        width: 159px;
+        height: 44px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #D41443;
+    }
+}
+.navigation{
+    display: flex;
+}
+.menu{
+    display: flex;
+    &__item{
+    align-items: center;
+    padding-left: 35px;
+    &:last-child(){
+        padding-left: 0px;
+    }
+    }
+}
