@@ -24,7 +24,7 @@
     position: relative;
     display: block;
     background-color: $background-color-header;
-    height: 665px;
+    height: 502px;
 }
 }
 .header{
@@ -32,6 +32,7 @@
     min-width: 100%;
     position: relative;
     &__main-title{
+        z-index: 200;
         position: absolute;
         top: 171px;
         left: 115px;
@@ -91,6 +92,7 @@
         }
     }
     &__text{
+        display: none;
         position: absolute;
         width: 200px;
         left: 295px;
@@ -130,6 +132,7 @@
         
     }
     &--buy-now {
+        display: none;
         @extend %button-main-style;
         width: 159px;
         padding-left: 43px;
@@ -140,7 +143,8 @@
     }
 }
 .navigation{
-    display: flex;
+    display: none;
+    
     z-index: 20;
    
 }
@@ -176,13 +180,14 @@
     right: 260px;
     top: 11px;
     z-index: 1;
+    scale: 0.64;
+
 }
 .extras{
     position: relative;
     &.small-circle{
         position: absolute;
-        width: 30px;
-        height: 30px;
+      
 }
     &__numbers{
         position: absolute;
@@ -219,5 +224,41 @@
         position: absolute;
         right: 97px;
         top: 156px;
+    }
+}
+@media screen and (min-width:1280px) {
+    .container {
+            &__head {
+                height: 665px;
+            }
+        }
+    .circle{
+        scale: 1;
+    }
+    .navigation{
+        display: flex;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 1279px) {
+    .container{
+        &__head{
+            height: 399px;
+        }
+    }
+    .button{
+        &--buy-now {
+            display: flex;
+        }
+    }
+    .header{
+       
+        &__text {
+                display:flex;
+        }
+    }
+    .circle{
+        scale: 0.6;
+        top: -90px;
+        right: 90px;
     }
 }
