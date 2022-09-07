@@ -1202,11 +1202,26 @@ body h1, body h2, body h3, body h4 {
   fill: #FFFFFF;
 }
 
-@media screen and (min-width: 480px) {
-  .background-txt {
-    width: 280px;
-    height: 308px;
-    background-color: rgb(250, 250, 250);
-    border-radius: 4px;
-  }
+.photo-girl {
+  display: flex;
+  justify-content: center;
+  padding-top: 123px;
+}
+
+.background-txt {
+  width: 926px;
+  height: 138px;
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 178px;
+  margin-top: 15px;
+}
+
+.girl-text {
+  font-size: 16px;
+  font-weight: 500px;
+  text-align: center;
+  border: 1px solid rgb(225, 225, 225);
 }/*# sourceMappingURL=main.css.map */
