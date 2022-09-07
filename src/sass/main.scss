@@ -4,9 +4,10 @@
  */
 
 // Style dla pliku z przykładem HTML fragmentu
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;700&family=Titan+One&display=swap');
 @import './variables';
 @import './setup';
 @import './header';
+@import './products';
 @import './about';
-@import './contacts'
+@import './contacts';
+@import './footer';
