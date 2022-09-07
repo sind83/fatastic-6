@@ -2,8 +2,14 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  background-image: linear-gradient(180deg, #ffffff 7%, #fff5f6 7%, #fff5f6 100%);
-}
+  background-image: linear-gradient(180deg, #ffffff 5%, #fff5f6 5%, #fff5f6 100%);
+  @media screen and (min-width: 768px) {
+  background-image: linear-gradient(180deg, #ffffff 12%, #fff5f6 12%, #fff5f6 100%);
+    }
+  
+    @media screen and (min-width: 1280px) {
+  background-image: linear-gradient(180deg, #ffffff 15%, #fff5f6 15%, #fff5f6 100%);
+    }}
 
 .contact-position {
   display: flex;
@@ -30,6 +36,9 @@
       padding: 51px 44px 62px 43px;
       width: 330px;
       height: 572px;
+    }
+    &:hover{
+      background-color: #f1dbe0;
     }
   }
   &__name {
