@@ -3,14 +3,12 @@
  * Główny plik dla stylów.
  * Wszystkie partials podłączamy tutaj.
  */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;700&family=Titan+One&display=swap");
 *,
 *::after,
 *::before {
   list-style: none;
   text-transform: none;
   text-decoration: none;
-  text-align: none;
   color: #000;
   padding: 0;
   margin: 0;
@@ -24,22 +22,29 @@ body {
   margin: auto;
   align-content: center;
 }
-body h1, body h2, body h3, body h4 {
+body h1,
+body h2,
+body h3,
+body h4 {
   font-family: "Titan One";
 }
 
 .container {
-  max-width: 1600px;
-  min-width: 320px;
-  display: flex;
+  width: 320px;
   margin: 0 auto;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    width: 768px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1280px;
+    width: 1280px;
   }
 }
 .container__head {
@@ -637,6 +642,9 @@ body h1, body h2, body h3, body h4 {
   }
 }
 @media screen and (min-width: 1280px) {
+  .about-us {
+    max-width: 1280px;
+  }
   .about-us__description {
     font-size: 26px;
     line-height: 29.77px;
@@ -703,9 +711,7 @@ body h1, body h2, body h3, body h4 {
   height: 100vh;
   padding: 32px;
   background-color: #3f51b5;
-  z-index: 999;
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  z-index: 5;
 }
 
 .is-hidden {
@@ -737,7 +743,7 @@ body h1, body h2, body h3, body h4 {
 .read-about {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   max-width: 528px;
@@ -792,60 +798,246 @@ body h1, body h2, body h3, body h4 {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
+.contacts {
+  display: flex;
+  flex-direction: column;
+  height: 1500px;
+  margin-top: 50px;
+  background-image: linear-gradient(180deg, #ffffff 7%, #fff5f6 7%, #fff5f6 100%);
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
+@media screen and (min-width: 768px) {
+  .contacts {
+    height: 700px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 20px;
+  .contacts {
+    height: 800px;
   }
-}
-.contact-position {
-  display: flex;
-  gap: 31px;
-}
-.contact-position__box-style {
-  padding: 51px 44px 62px 43px;
-  width: 330px;
-  height: 572px;
-  background: #FFFFFF;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  border-radius: 24px;
-}
-.contact-position__name {
-  padding-bottom: 32px;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
+.contact-position {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .container {
-    max-width: 100%;
-    padding: 0 36px;
+@media screen and (min-width: 768px) {
+  .contact-position {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 100%;
-    padding: 0 115px;
+  .contact-position {
+    gap: 31px;
   }
 }
+.contact-position__box-style {
+  width: 220px;
+  height: 427px;
+  background: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding: 43px 21px 43px 20px;
+}
+@media screen and (min-width: 768px) {
+  .contact-position__box-style {
+    padding: 50px 32px 50px 31px;
+    height: 544px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact-position__box-style {
+    padding: 51px 44px 62px 43px;
+    width: 330px;
+    height: 572px;
+  }
+}
+.contact-position__name {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 16px;
+  background: #f0d1a5;
+  border-radius: 4px;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .contact-position__name {
+    width: 73px;
+    height: 28px;
+    font-size: 16px;
+  }
+}
+.contact-position__name.--truck {
+  margin-bottom: 32px;
+  background: #c2e297;
+  width: 130px;
+  border-radius: 4px;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .contact-position__name.--truck {
+    width: 138px;
+    height: 28px;
+    font-size: 16px;
+  }
+}
+.contact-position__city {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .contact-position__city {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1290px) {
+  .contact-position__city {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+.contact-position__days {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .contact-position__days {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1290px) {
+  .contact-position__days {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+}
+.contact-position__hours {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  color: #ffa5ba;
+}
+@media screen and (min-width: 768px) {
+  .contact-position__hours {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1290px) {
+  .contact-position__hours {
+    font-size: 16px;
+  }
+}
+.contact-position__paragraph, .contact-position__contact {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  color: #907e82;
+}
+@media screen and (min-width: 768px) {
+  .contact-position__paragraph, .contact-position__contact {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1290px) {
+  .contact-position__paragraph, .contact-position__contact {
+    font-size: 16px;
+  }
+}
+
+.--contactBorders {
+  display: block;
+  padding: 25px 0px;
+  margin: 25px 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .--contactBorders {
+    padding: 30px 0px;
+    margin: 30px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .--contactBorders {
+    padding: 25px 0px;
+    margin: 25px 0;
+  }
+}
+
+.contact-buttons {
+  margin-top: 54px;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .contact-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+.contact-buttons__btn {
+  width: 161.45px;
+  height: 44px;
+  background: #d41342;
+  border-radius: 22px;
+  justify-content: center;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.contact-buttons .--locations {
+  background: #d41342;
+  color: #ffffff;
+}
+.contact-buttons .--locations:hover, .contact-buttons .--locations:focus {
+  background: #D41342;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.contact-buttons .--franchise {
+  background: #ffffff;
+  color: #d41443;
+}
+.contact-buttons .--franchise:hover, .contact-buttons .--franchise:focus {
+  background: #ECEBEB;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
 .footer {
   padding-top: 165px;
   padding-bottom: 10px;
@@ -861,11 +1053,25 @@ body h1, body h2, body h3, body h4 {
 .footer-position {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 97px;
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .footer-position {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-position {
+    padding: 0 20px 97px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer-position {
+    padding: 0 36px 97px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-position {
+    padding: 0 115px 97px;
   }
 }
 
