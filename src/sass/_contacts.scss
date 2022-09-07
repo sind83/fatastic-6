@@ -1,15 +1,8 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  height: 1500px;
   margin-top: 50px;
   background-image: linear-gradient(180deg, #ffffff 7%, #fff5f6 7%, #fff5f6 100%);
-  @media screen and (min-width: 768px) {
-    height: 700px;
-  }
-  @media screen and (min-width: 1280px) {
-    height: 800px;
-  }
 }
 
 .contact-position {
@@ -89,7 +82,6 @@
     line-height: 186%;
     letter-spacing: 0.04em;
     color: #000000;
-    
 
     @media screen and (min-width: 768px) {
       font-size: 14px;
@@ -107,14 +99,13 @@
     letter-spacing: 0.04em;
     color: #000000;
 
-
     @media screen and (min-width: 768px) {
       font-size: 14px;
     }
 
     @media screen and (min-width: 1290px) {
       font-size: 16px;
-          padding-top: 10px;
+      padding-top: 10px;
     }
   }
   &__hours {
@@ -157,57 +148,64 @@
   margin: 25px 0;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
-    @media screen and (min-width: 768px) {
-  padding: 30px 0px;
+  @media screen and (min-width: 768px) {
+    padding: 30px 0px;
     margin: 30px 0;
-      }
-                @media screen and (min-width: 1280px) {
-  padding: 25px 0px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 25px 0px;
     margin: 25px 0;
-                }
+  }
 }
 .contact-buttons {
   margin-top: 54px;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 
   @media screen and (min-width: 768px) {
+    margin-top: 81px;
     flex-direction: row;
     gap: 15px;
   }
-  &__btn{
-        width: 161.45px;
-          height: 44px;
-          background: #d41342;
-          border-radius: 22px;
-          justify-content: center;
-        
-          font-family: 'DM Sans';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 21px;
-          display: flex;
-          align-items: center;
-          text-align: center;
-          color: #ffffff;
-            cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    margin-top: 86px;
+    flex-direction: row;
+    gap: 15px;
+  }
+  &__btn {
+    width: 161.45px;
+    height: 44px;
+    background: #d41342;
+    border-radius: 22px;
+    justify-content: center;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
   }
   & .--locations {
     background: #d41342;
     color: #ffffff;
-  &:hover,
-  &:focus{
-    background: #D41342;
-              box-shadow: (0px 2px 2px rgba(0, 0, 0, 0.25));
-  }}
+    &:hover,
+    &:focus {
+      background: #d41342;
+      box-shadow: (0px 2px 2px rgba(0, 0, 0, 0.25));
+    }
+  }
   & .--franchise {
     background: #ffffff;
     color: #d41443;
 
     &:hover,
-    &:focus{
-      background: #ECEBEB;
+    &:focus {
+      background: #ecebeb;
       box-shadow: (0px 2px 2px rgba(0, 0, 0, 0.25));
     }
   }
