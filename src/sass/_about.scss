@@ -34,6 +34,7 @@
   }
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
+      padding-top: 125px;
   }
   &__description {
     display: flex;
@@ -193,139 +194,6 @@
     box-shadow: (0px 2px 2px rgba(0, 0, 0, 0.25));
   }
 }
-// @media screen and (min-width: 768px) {
-//   .about-us {
-//     padding-top: 130px;
-
-//     &__description {
-//       font-size: 26px;
-//       line-height: 29.77px;
-//       text-align: center;
-//       text-transform: uppercase;
-//       color: #ffa5ba;
-//       margin-bottom: 16px;
-//     }
-
-//     &__header {
-//       width: 600px;
-//       font-size: 48px;
-//       line-height: 54.96px;
-//       letter-spacing: 0.04em;
-//       text-align: center;
-//       text-transform: uppercase;
-//       color: #d41443;
-//       margin-bottom: 26px;
-//       justify-content: center;
-//     }
-
-//     &__content {
-//       flex-direction: row;
-//       margin: 50px 36px 0px 39px;
-//     }
-
-//     &__krowka {
-//       width: 340px;
-//     }
-
-//     &__text-content {
-//       padding-left: 17px;
-//       align-items: flex-start;
-//     }
-
-//     &__bold-paragraph {
-//       font-weight: 500;
-//       font-size: 14px;
-//       line-height: 176%;
-//       /* or 19px */
-//       color: #000000;
-//       text-align: left;
-//       margin-bottom: 50px;
-//       margin-top: 46px;
-//       padding: 0;
-//     }
-
-//     &__text {
-//       font-size: 14px;
-//       line-height: 176%;
-//       /* or 19px */
-//       color: #907e82;
-//       padding: 0;
-//     }
-
-//     &__button {
-//       font-size: 16px;
-//     }
-//   }
-// }
-
-// @media screen and (min-width: 1280px) {
-//   .about-us {
-//     max-width: 1280px;
-//     &__description {
-//       font-size: 26px;
-//       line-height: 29.77px;
-//       text-align: center;
-//       text-transform: uppercase;
-//       color: #ffa5ba;
-//       margin-bottom: 55px;
-//     }
-
-//     &__header {
-//       width: 600px;
-//       font-size: 58px;
-//       line-height: 66px;
-//       letter-spacing: 0.04em;
-//       text-align: center;
-//       text-transform: uppercase;
-//       color: #d41443;
-//       margin-bottom: 26px;
-//       justify-content: center;
-//     }
-
-//     &__content {
-//       display: flex;
-//       flex-direction: row;
-//       margin: 0 112px;
-//     }
-
-//     &__krowka {
-//       width: 516px;
-//     }
-
-//     &__text-content {
-//       flex-direction: column;
-//       padding-left: 74px;
-//       margin-top: 50px;
-//     }
-
-//     &__bold-paragraph {
-//       font-weight: 500;
-//       font-size: 14px;
-//       line-height: 176%;
-//       /* or 19px */
-//       color: #000000;
-//       text-align: left;
-//       margin-bottom: 50px;
-//       margin-top: 46px;
-//       padding: 0;
-//     }
-
-//     &__text {
-//       display: flex;
-//       font-weight: 500;
-//       font-size: 14px;
-//       line-height: 194%;
-//       /* or 19px */
-//       color: #907e82;
-//       text-align: left;
-//       padding: 0;
-//     }
-
-//     &__button {
-//       font-size: 16px;
-//     }
-//   }
-// }
 .about-modal {
   position: fixed;
   top: 0;
