@@ -1,26 +1,24 @@
 .products {
   flex-direction: column;
+  margin-top: 121px;
+  &__paragraf {
+    margin-bottom: 15px;
+    color: $second-text-color;
+    font-family: Titan One;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
   &__header {
-    margin-top: 121px;
-    p {
-      margin-bottom: 15px;
-      color: $second-text-color;
-      font-family: Titan One;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 21px;
-      letter-spacing: 0em;
-      text-align: center;
-    }
-    h2 {
-      color: $main-text-color;
-      font-family: Titan One;
-      font-size: 34px;
-      font-weight: 400;
-      line-height: 39px;
-      letter-spacing: 0.04em;
-      text-align: center;
-    }
+    color: $main-text-color;
+    font-family: Titan One;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+    text-align: center;
   }
   &__list {
     margin: 142px auto 98px auto;
@@ -120,8 +118,8 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 
   &__content {
     position: relative;
@@ -150,7 +148,9 @@
   }
 
   &__close-button {
-    padding: 10px 15px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
     color: white;
     float: right;
     font-size: 28px;
@@ -158,14 +158,14 @@
 
     &:hover,
     &:focus {
-      color: #000;
+      color: $main-text-color;
       text-decoration: none;
       cursor: pointer;
     }
   }
   &__header {
     padding-top: 53px;
-       color: white;
+    color: white;
     font-family: Titan One;
     font-size: 34px;
     font-weight: 400;
@@ -180,14 +180,15 @@
 
     color: $general-white-text-color;
     font-family: DM Sans;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 700;
     line-height: 21px;
     letter-spacing: 0.04em;
   }
   &__picture {
     position: relative;
-     left: 30px;
+    left: 30px;
+    top: 15px;
   }
 
   @-webkit-keyframes animateleft {
@@ -214,19 +215,16 @@
 }
 @media screen and (min-width: 768px) {
   .products {
-    flex-direction: column;
+    margin-top: 122px;
+    &__paragraf {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 29.77px;
+    }
     &__header {
-      margin-top: 122px;
-      p {
-        font-size: 26px;
-        font-weight: 400;
-        line-height: 29.77px;
-      }
-      h2 {
-        font-size: 47px;
-        line-height: 54.96px;
-        letter-spacing: 0.04em;
-      }
+      font-size: 47px;
+      line-height: 54.96px;
+      letter-spacing: 0.04em;
     }
     &__list {
       margin: 150px auto 112px auto;
@@ -300,8 +298,9 @@
     }
 
     &__close-button {
-      padding: 16px 34px;
-         }
+      top: 25px;
+      right: 30px;
+    }
     &__header {
       padding-top: 65px;
       font-size: 50px;
@@ -309,27 +308,26 @@
     &__description {
       width: 550px;
       padding-top: 32px;
-      font-size: 17px;
-     }
+      font-size: 16px;
+    }
     &__picture {
       left: 220px;
+      top: 25px;
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .products {
+    margin-top: 127px;
+    &__paragraf {
+      font-size: 30px;
+      line-height: 34.35px;
+      letter-spacing: 0.04em;
+    }
     &__header {
-      margin-top: 127px;
-      p {
-        font-size: 30px;
-        line-height: 34.35px;
-        letter-spacing: 0.04em;
-      }
-      h2 {
-        font-size: 58px;
-        line-height: 66.41px;
-        letter-spacing: 0.06em;
-      }
+      font-size: 58px;
+      line-height: 66.41px;
+      letter-spacing: 0.06em;
     }
     &__list {
       margin: 259px auto 119px auto;
@@ -387,4 +385,4 @@
       height: 335px;
     }
   }
-  }
+}
