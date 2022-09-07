@@ -112,11 +112,9 @@ body h4 {
 
 .products {
   flex-direction: column;
-}
-.products__header {
   margin-top: 121px;
 }
-.products__header p {
+.products__paragraf {
   margin-bottom: 15px;
   color: #FFA5BA;
   font-family: Titan One;
@@ -126,7 +124,7 @@ body h4 {
   letter-spacing: 0em;
   text-align: center;
 }
-.products__header h2 {
+.products__header {
   color: #D41443;
   font-family: Titan One;
   font-size: 34px;
@@ -228,8 +226,8 @@ body h4 {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-product__content {
   position: relative;
@@ -258,14 +256,16 @@ body h4 {
   background-color: #c2e297;
 }
 .modal-product__close-button {
-  padding: 10px 15px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
   color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 .modal-product__close-button:hover, .modal-product__close-button:focus {
-  color: #000;
+  color: #D41443;
   text-decoration: none;
   cursor: pointer;
 }
@@ -285,7 +285,7 @@ body h4 {
   padding-top: 20px;
   color: #ffffff;
   font-family: DM Sans;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 700;
   line-height: 21px;
   letter-spacing: 0.04em;
@@ -293,6 +293,7 @@ body h4 {
 .modal-product__picture {
   position: relative;
   left: 30px;
+  top: 15px;
 }
 @-webkit-keyframes animateleft {
   from {
@@ -317,17 +318,14 @@ body h4 {
 
 @media screen and (min-width: 768px) {
   .products {
-    flex-direction: column;
-  }
-  .products__header {
     margin-top: 122px;
   }
-  .products__header p {
+  .products__paragraf {
     font-size: 26px;
     font-weight: 400;
     line-height: 29.77px;
   }
-  .products__header h2 {
+  .products__header {
     font-size: 47px;
     line-height: 54.96px;
     letter-spacing: 0.04em;
@@ -395,7 +393,8 @@ body h4 {
     height: 600px;
   }
   .modal-product__close-button {
-    padding: 16px 34px;
+    top: 25px;
+    right: 30px;
   }
   .modal-product__header {
     padding-top: 65px;
@@ -404,22 +403,23 @@ body h4 {
   .modal-product__description {
     width: 550px;
     padding-top: 32px;
-    font-size: 17px;
+    font-size: 16px;
   }
   .modal-product__picture {
     left: 220px;
+    top: 25px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .products__header {
+@media screen and (min-width: 1280px) {
+  .products {
     margin-top: 127px;
   }
-  .products__header p {
+  .products__paragraf {
     font-size: 30px;
     line-height: 34.35px;
     letter-spacing: 0.04em;
   }
-  .products__header h2 {
+  .products__header {
     font-size: 58px;
     line-height: 66.41px;
     letter-spacing: 0.06em;
