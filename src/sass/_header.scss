@@ -165,6 +165,10 @@ margin: auto;
     font-size: 16px;
     line-height: 21px;
     display: flex;
+    &__icon{
+        width: 24px;
+        fill: $main-text-color;
+    }
 
     &__item{
     align-items: center;
@@ -425,5 +429,10 @@ margin: auto;
     }
     .extras{
         display: block;
+    }
+    .menu{
+        &__icon{
+            display: none;
+        }
     }
 }
