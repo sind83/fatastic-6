@@ -169,9 +169,20 @@
         &:focus {
             background-color: $button-color-hover1;
         }
-                
     }
-}
+        &--show{
+            @extend %button-main-style;
+                width: 159px;
+                padding-left: 43px;
+                margin-left: 35px;
+                &:hover,
+                &:focus {
+                    background-color: $button-color-hover1;
+                }
+
+        }
+    }
+
 .navigation{
     display: none;
     
@@ -279,6 +290,12 @@
         }
     }
     .button{
+        &--show {
+            font-size: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 43px;
+            }
         
         &--buy-now {
             display: flex;
@@ -388,7 +405,7 @@
 }
 .menu{
     &__icon{
-        margin-left: 240px;
+        margin-left: 40px;
     }
 }
 }
