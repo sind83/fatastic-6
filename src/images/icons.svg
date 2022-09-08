@@ -25,7 +25,11 @@
 <symbol id="ellipse" viewBox="0 0 12 12">
 <circle cx="6" cy="6" r="6" fill="#D9D9D9"/>
 </symbol>
-<symbole id=dots viewBox="0 0 32 4"> <circle cx="16" cy="2" r="2" fill="#C7133E"/> <circle cx="2" cy="2" r="2" fill="#C7133E"/> <circle cx="30" cy="2" r="2" fill="#C7133E"/>
+<symbole id="dots" viewBox="0 0 32 4"> <circle cx="16" cy="2" r="2" fill="#C7133E"/> <circle cx="2" cy="2" r="2" fill="#C7133E"/> <circle cx="30" cy="2" r="2" fill="#C7133E"/>
 </symbole>
+<symbol id="menu_24px" viewBox="0 0 48 32">
+<path d="M0 5.333v-5.333h48v5.333h-48zM0 18.667h48v-5.333h-48v5.333zM0 32h48v-5.333h-48v5.333z"></path>
+</symbol>
+
 </defs>
 </svg>
