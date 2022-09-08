@@ -34,17 +34,18 @@
     &__main-title{
         z-index: 200;
         position: absolute;
-        top: 171px;
-        left: 115px;
-        width: 277px;
-        font-size: 38px;
-        line-height: 44px;
+        top: 193px;
+        left: 20px;
+        width: 218px;
+        
+        font-size: 26px;
+        line-height: 30px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #FFFFFF;
         &--decor{
          
-            font-size: 58px;
+            font-size: 48px;
             line-height: 90.5%;
             letter-spacing: 0.14em;
             text-transform: uppercase;
@@ -73,6 +74,7 @@
     }
     &__pict-item{
         &--lady{
+            display: none;
             position: absolute;
             top: 433px;
             right: 109px;
@@ -80,12 +82,14 @@
         }
         &--ice{
             position: absolute;
-                top: 108px;
-                right: 450px;
+            scale: 0.72;
+                top: 22px;
+                right: 15px;
                 z-index: 10;
                 
         }
         &--milk{
+            display: none;
             position: absolute;
                 top: 429px;
                 left: 77px;
@@ -177,13 +181,14 @@
 }
 .circle{
     position: absolute;
-    right: 260px;
-    top: 11px;
+    right: -160px;
+    top: -10px;
     z-index: 1;
     scale: 0.64;
 
 }
 .extras{
+    display: none;
     position: relative;
     &.small-circle{
         position: absolute;
@@ -226,19 +231,7 @@
         top: 156px;
     }
 }
-@media screen and (min-width:1280px) {
-    .container {
-            &__head {
-                height: 665px;
-            }
-        }
-    .circle{
-        scale: 1;
-    }
-    .navigation{
-        display: flex;
-    }
-}
+
 @media screen and (min-width:768px) and (max-width: 1279px) {
     .container{
         &__head{
@@ -246,19 +239,166 @@
         }
     }
     .button{
+        
         &--buy-now {
             display: flex;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 43px;
+            font-size: 16px;
+
         }
+        font-size: 8px;
+        line-height: 10px;
+        padding: 10px 10px 10px 10px;
     }
     .header{
-       
-        &__text {
-                display:flex;
+        min-width: calc(100% - 78px);
+        
+        &__bar{
+            justify-content:space-between;
+            margin-left: 34px;
+            
         }
+        &__text {
+                display:block;
+                z-index: 200;
+                top: 292px;
+                left: 154px;
+                width: 114px;
+                &--decor{
+                font-size: 8px;
+                line-height: 150%;
+                }
+                
+        }
+               
+         &__pict-item {
+            &--ice { 
+                scale: 0.6;
+                top: -48px;
+                right: 247px;
+                }
+            &--milk{
+                display: block;
+                scale: 0.66;
+                top: 220px;
+                left: 0px;
+            }
+            &--lady{
+                display: block;
+                scale: 0.57;
+                top: 216px;
+                right: -10px;
+            }
+            }
+        &__main-title{
+            top: 102px;
+            left: 34px;
+            width: 162px;
+            font-size: 22px;
+            line-height: 25px;
+            &--decor{
+            font-size: 34px;
+            line-height: 90.5%;
+            }
+        }    
+        &__buttons{
+            left: 34px;
+            top: 202px;
+        }
+
     }
     .circle{
         scale: 0.6;
         top: -90px;
-        right: 90px;
+        right: 55px;
+    }
+.arrow{
+    scale: 0.7;
+    margin-top: 7px;
+    
+}
+.extras{
+    display: flex;
+    &__text{
+        top: 35px;
+       
+        font-size:8px ;
+    }
+    &__small-circle{
+        width: 16px;
+    }
+    &__numbers{
+        font-size: 28px;
+        line-height: 32px;
+    }
+    &--one{
+        top:94px;
+        right: 34px;
+    }
+    &--two {
+        top: 151px;
+        right: 34px;
+    }
+}
+}
+
+@media screen and (min-width:1280px) {
+    .container {
+        &__head {
+            height: 665px;
+        }
+    }
+
+    .circle {
+        scale: 1;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .button {
+        &--buy-now {
+            display: flex;
+        }
+    }
+
+    .header {
+        &__pict-item {
+            &--ice {
+                top: 108px;
+                right: 450px;
+                scale: 1;
+                    }
+                &--milk {
+                    display: block;
+                   
+                }
+        
+                &--lady {
+                    display: block;
+                   
+                }
+        &__main-title {
+            font-size: 38px;
+            line-height: 44px;
+            width: 277px;
+            top: 171px;
+            left: 115px;
+
+            &--decor {
+                font-size: 58px;
+            }
+        }
+        
+        }
+        &__text{
+            display: block;
+    }
+    }
+    .extras{
+        display: block;
     }
 }
