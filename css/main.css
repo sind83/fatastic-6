@@ -62,6 +62,74 @@ html {
     width: 1280px;
   }
 }
+.mobile-menu__icon {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  fill: #FFFFFF;
+  padding: 2px;
+  left: 250px;
+}
+.mobile-menu__link {
+  display: block;
+  margin-left: 40px;
+  margin-top: 22px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+}
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: #D41443;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  background-color: #E17992;
+  z-index: 777;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-toggle {
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu-toggle:hover, .menu-toggle:focus {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    display: none;
+  }
+}
 .button--buy-now, .button--how-made, .button--products {
   border-radius: 22px;
   padding-top: 8px;

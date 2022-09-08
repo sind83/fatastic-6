@@ -17,7 +17,14 @@
           </ul>
         </nav>
       </li>
+   
       <li class="header__item">
+        <button
+                        type="menu"
+                        class="menu-toggle js-open-menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
+                    >
         <svg class="menu__icon">
           <use href="./images/icons.svg#menu_24px" />
         </svg>
@@ -27,7 +34,38 @@
       </li>
     </ul>
   </div>
-
+<!-- mobile menu - start -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle js-close-menu">
+                        <svg class="mobile-menu__icon">
+                            <use href="./images/icons.svg#icon-cross" />
+                        </svg>
+                    </button>
+                      
+                    <ul class="mobile-menu">
+                      <li>
+                        <a href="" class="button button--buy-now">Buy now ></a>
+                        dupa jaśka
+                      </li>
+                        <li>
+                            <a href="" class="mobile-menu__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="mobile-menu__link">About us</a>
+                        </li>
+                        <li>
+                            <a href="" class="mobile-menu__link">How it's made?</a>
+                        </li>
+                        <li>
+                            <a href="" class="mobile-menu__link">Our products</a>
+                        </li>
+                        <li>
+                            <a href="" class="mobile-menu__link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+<!-- mobile menu - end -->
   <section class="header__text-box">
     <h1 class="header__main-title">
       Ice Cream made with <span class="header__main-title--decor">Pasion</span>
