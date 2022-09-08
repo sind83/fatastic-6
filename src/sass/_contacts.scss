@@ -5,15 +5,16 @@
   margin-top: 50px;
   background-image: linear-gradient(180deg, #ffffff 5%, #fff5f6 5%, #fff5f6 100%);
   @media screen and (min-width: 768px) {
-  background-image: linear-gradient(180deg, #ffffff 12%, #fff5f6 12%, #fff5f6 100%);
-    }
-  
-    @media screen and (min-width: 1280px) {
-  background-image: url(/images/ciapki-bg01.png),
-    url(/images/ciapki-bg02.png), linear-gradient(180deg, #ffffff 15%, #fff5f6 15%, #fff5f6 100%);
-        background-position: left 30%, right 30%;
-        background-repeat: no-repeat;
-    }}
+    background-image: linear-gradient(180deg, #ffffff 12%, #fff5f6 12%, #fff5f6 100%);
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/ciapki-bg01.png), url(/images/ciapki-bg02.png),
+      linear-gradient(180deg, #ffffff 15%, #fff5f6 15%, #fff5f6 100%);
+    background-position: left 30%, right 30%;
+    background-repeat: no-repeat;
+  }
+}
 
 .contact-position {
   display: flex;
@@ -40,9 +41,6 @@
       padding: 51px 44px 62px 43px;
       width: 330px;
       height: 572px;
-    }
-    &:hover{
-      background-color: #f1dbe0;
     }
   }
   &__name {
@@ -153,6 +151,9 @@
     @media screen and (min-width: 1290px) {
       font-size: 16px;
     }
+  }
+  &__contact:hover {
+    color: #d41443;
   }
 }
 .--contactBorders {
