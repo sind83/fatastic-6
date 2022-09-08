@@ -1,0 +1,118 @@
+.advantages {
+    padding-top: 40px;
+    padding-bottom: 97px;
+    text-align: left;
+    background-color: #fff5f6;
+    
+  
+    &__header {
+      display: none;
+    }
+  
+    &__list {
+      min-width: 280px;
+      list-style: none;
+    }
+  
+    &__item {
+      margin: 0 auto;
+      height: 156px;
+      width: 280px;
+  
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  
+    &__number {
+      font-family: 'Titan One', cursive;
+      color: $main-text-color;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 41px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 14px 0 14px 0;
+  
+      &::selection {
+        color: #fff;
+        background-color: $main-text-color;
+      }
+    }
+  
+    &__description {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 170%;
+      color: #000;
+  
+      &::selection {
+        color: #000;
+        background-color: $main-text-color;
+      }
+    }
+  }
+  
+  // Tablet 768-1280//
+  @media screen and (min-width: 768px) {
+    .advantages {
+      padding-top: 0;
+      padding-bottom: 140px;
+  
+      &__list {
+        height: 222px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+  
+      &__item {
+        width: 180px;
+  
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+  
+      &__number {
+        font-size: 48px;
+        line-height: 55px;
+        text-transform: none;
+      }
+  
+      &__description {
+        width: 180px;
+        font-size: 14px;
+        line-height: 174%;
+      }
+    }
+  }
+  
+  // Desktop 1280+//
+  @media screen and (min-width: 1280px) {
+    .advantages {
+      &__list {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      &__item {
+        width: 330px;
+      }
+  
+      &__number {
+        font-size: 58px;
+        line-height: 66px;
+        text-transform: none;
+      }
+  
+      &__description {
+        width: 100%;
+        font-size: 16px;
+        line-height: 177%;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
