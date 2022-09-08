@@ -70,34 +70,22 @@ html {
 .button {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
 }
 
+.container {
+  margin: auto;
+}
 .container__head {
   position: relative;
   display: block;
   background-color: #FFB8CA;
   height: 502px;
 }
-.container__head::before {
-  content: "";
-  width: 346px;
-  height: 344px;
-  border-radius: 50%;
-  background-image: radial-gradient(circle, #FFA5BA 100%, #FFA5BA 0%);
-  position: absolute;
-  right: -50px;
-  top: 80px;
-  -webkit-clip-path: inset(0px 50px 0px 0px);
-          clip-path: inset(0px 50px 0px 0px);
-}
 
 .header {
-  position: relative;
   display: inline-flex;
-  height: 50px;
   min-width: 100%;
-  z-index: 200;
+  position: relative;
 }
 .header__main-title {
   z-index: 200;
@@ -206,6 +194,7 @@ html {
 
 .navigation {
   display: none;
+  z-index: 20;
 }
 
 .menu {
@@ -214,10 +203,6 @@ html {
   font-size: 16px;
   line-height: 21px;
   display: flex;
-}
-.menu__icon {
-  width: 24px;
-  fill: #D41443;
 }
 .menu__item {
   align-items: center;
@@ -231,16 +216,28 @@ html {
 }
 
 .arrow {
+  background-image: url("../images/arrow-right.png");
   width: 26px;
   height: 26px;
+  margin-top: 20px;
+}
+
+.circle {
+  position: absolute;
+  right: -150px;
+  top: -20px;
+  z-index: 1;
+  scale: 0.64;
 }
 
 .extras {
   display: none;
   position: relative;
 }
+.extras.small-circle {
+  position: absolute;
+}
 .extras__numbers {
-  z-index: 100;
   position: absolute;
   font-family: "Titan One";
   font-size: 46px;
@@ -251,17 +248,6 @@ html {
   color: #D41443;
   left: -45px;
   top: 6px;
-}
-.extras__numbers::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffffff 100%, #ffffff 0%);
-  position: absolute;
-  right: -15px;
-  top: -6px;
-  z-index: -1;
 }
 .extras__text {
   position: absolute;
@@ -290,14 +276,6 @@ html {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .container__head {
     height: 399px;
-  }
-  .container__head::before {
-    width: 344px;
-    height: 342px;
-    right: 150px;
-    top: 31px;
-    -webkit-clip-path: none;
-            clip-path: none;
   }
   .button {
     font-size: 8px;
@@ -362,9 +340,13 @@ html {
     left: 34px;
     top: 202px;
   }
+  .circle {
+    scale: 0.6;
+    top: -90px;
+    right: 55px;
+  }
   .arrow {
-    width: 18px;
-    height: 18px;
+    scale: 0.7;
     margin-top: 7px;
   }
   .extras {
@@ -381,35 +363,23 @@ html {
     font-size: 28px;
     line-height: 32px;
   }
-  .extras__numbers::after {
-    width: 16px;
-    height: 16px;
-    right: -10px;
-    top: -3px;
-  }
   .extras--one {
     top: 94px;
-    right: 60px;
+    right: 34px;
   }
   .extras--two {
     top: 151px;
-    right: 60px;
-  }
-  .menu__icon {
-    margin-left: 240px;
+    right: 34px;
   }
 }
 @media screen and (min-width: 1280px) {
   .container__head {
     height: 665px;
   }
-  .container__head::before {
-    width: 538px;
-    height: 538px;
-    right: 250px;
+  .circle {
+    scale: 1;
     top: 11px;
-    -webkit-clip-path: none;
-            clip-path: none;
+    right: 260px;
   }
   .navigation {
     display: flex;
@@ -422,10 +392,6 @@ html {
     display: flex;
   }
   .button--products {
-    font-size: 14px;
-    margin-right: 15px;
-  }
-  .button--how-made {
     font-size: 14px;
     margin-right: 15px;
   }
@@ -443,37 +409,25 @@ html {
   .header__pict-item--lady {
     display: block;
   }
-  .header__main-title {
+  .header__pict-item__main-title {
     font-size: 38px;
     line-height: 44px;
     width: 277px;
     top: 171px;
     left: 115px;
   }
-  .header__main-title--decor {
+  .header__pict-item__main-title--decor {
     font-size: 58px;
   }
   .header__text {
     display: block;
   }
-  .header__buttons {
+  .header__text__buttons {
     left: 115px;
     top: 333px;
   }
   .extras {
     display: block;
-  }
-  .menu__icon {
-    display: none;
-  }
-  .menu__link {
-    color: #ffffff;
-  }
-  .menu__link:hover, .menu__link:focus {
-    color: #D41443;
-  }
-  .arrow {
-    margin-top: 34px;
   }
 }
 .products {
@@ -1643,7 +1597,7 @@ html {
     text-align: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer-bottom {
     padding: 29px 0 18px 0;
   }
