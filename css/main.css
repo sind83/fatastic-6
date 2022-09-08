@@ -156,7 +156,7 @@ html {
             transform: translateX(60%);
   }
 }
-.button--buy-now, .button--how-made, .button--products {
+.button--show, .button--buy-now, .button--how-made, .button--products {
   border-radius: 22px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -326,6 +326,14 @@ html {
 .button--buy-now:hover, .button--buy-now:focus {
   background-color: #ECEBEB;
 }
+.button--show {
+  width: 159px;
+  padding-left: 43px;
+  margin-left: 35px;
+}
+.button--show:hover, .button--show:focus {
+  background-color: #ECEBEB;
+}
 
 .navigation {
   display: none;
@@ -430,6 +438,12 @@ html {
     font-size: 8px;
     line-height: 10px;
     padding: 10px 10px 10px 10px;
+  }
+  .button--show {
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 43px;
   }
   .button--buy-now {
     display: -webkit-box;
