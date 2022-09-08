@@ -6,19 +6,23 @@
 
 .footer--bg {
     background-color: #FFF5F6;
+    width: 100%;
 }
 
 .footer-position {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 113px 115px 97px;
+    gap: 257px;
     @media screen and (max-width: 767px) {   
         padding: 165px 20px 43px; 
         flex-direction: column;
+       gap: 0;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-        padding: 165px 36px 91px;        
+        padding: 165px 36px 91px;   
+        gap: 92px;
     }
 }
 
@@ -38,6 +42,7 @@
         letter-spacing: 0.04em;
         color: #FFA5BA;
         padding-bottom: 15px;
+       
         @media screen and (max-width: 767px) {
             font-size: 18px;
             line-height: 1.166;
@@ -46,6 +51,7 @@
             @media screen and (min-width: 768px) and (max-width: 1279px) {
             font-size: 26px;
             line-height: 1.153;
+            width: 340px;
         }
     }
 
