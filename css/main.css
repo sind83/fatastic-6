@@ -86,10 +86,7 @@ html {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-html {
-  margin: 0;
+  cursor: pointer;
 }
 
 .container__head {
@@ -267,10 +264,8 @@ html {
 }
 
 .arrow {
-  background-image: url("../images/arrow-right.png");
   width: 26px;
   height: 26px;
-  margin-top: 20px;
 }
 
 .extras {
@@ -405,7 +400,8 @@ html {
     top: 202px;
   }
   .arrow {
-    scale: 0.7;
+    width: 18px;
+    height: 18px;
     margin-top: 7px;
   }
   .extras {
@@ -472,6 +468,10 @@ html {
     font-size: 14px;
     margin-right: 15px;
   }
+  .button--how-made {
+    font-size: 14px;
+    margin-right: 15px;
+  }
   .header__bar {
     margin-top: 37px;
   }
@@ -508,6 +508,15 @@ html {
   }
   .menu__icon {
     display: none;
+  }
+  .menu__link {
+    color: #ffffff;
+  }
+  .menu__link:hover, .menu__link:focus {
+    color: #D41443;
+  }
+  .arrow {
+    margin-top: 34px;
   }
 }
 .products {
