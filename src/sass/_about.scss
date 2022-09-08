@@ -17,7 +17,10 @@
 @media screen and (min-width: 1280px) {
   .about {
     height: 780px;
-
+    background-image: url(/images/desktop-about-background01.png),
+      url(/images/desktop-about-background02.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
   }
 }
 
@@ -31,11 +34,7 @@
   }
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
-      padding-top: 125px;
-          background-image: url(/images/desktop-about-background01.png),
-              url(/images/desktop-about-background02.png);
-            background-position: left bottom, right bottom;
-            background-repeat: no-repeat;
+    padding-top: 125px;
   }
   &__description {
     display: flex;
@@ -94,8 +93,7 @@
     @media screen and (min-width: 1280px) {
       margin: 0 112px;
     }
-  
-}
+  }
   &__text-content {
     display: flex;
     flex-direction: column;
@@ -109,7 +107,6 @@
     @media screen and (min-width: 1280px) {
       flex-direction: column;
       padding-left: 74px;
-
     }
   }
   &__krowka {
