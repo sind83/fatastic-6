@@ -183,6 +183,10 @@ html {
   cursor: pointer;
 }
 
+.body {
+  background-color: #FFB8CA;
+}
+
 .container__head {
   position: relative;
   display: block;

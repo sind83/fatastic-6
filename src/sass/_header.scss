@@ -21,7 +21,9 @@
     
  
 }
-
+ .body {
+     background-color: $background-color-header;
+ }
 .container{
     
 //margin: auto;
@@ -277,8 +279,11 @@
 }
 
 @media screen and (min-width:768px) and (max-width: 1279px) {
+  
     .container{
+       
         &__head{
+         
            height: 399px;
         &::before {
                 width: 344px;
@@ -338,6 +343,7 @@
                 scale: 0.6;
                 top: -48px;
                 right: 247px;
+              
                 }
             &--milk{
                 display: block;
